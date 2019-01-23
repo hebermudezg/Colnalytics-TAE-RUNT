@@ -1,0 +1,62 @@
+---
+title: "Lineamientos para el segundo trabajo - TAE"
+author: "Prof. Juan David Ospina Arango</br>Universidad Nacional - Sede Medellín</br>Técnicas de aprendizaje estadístico</br>Semestre 2018-02"
+output:
+  html_document:
+    df_print: paged
+---
+
+# Predicción del número de vehículos registrados en el sistema de tránsito nacional 
+En este trabajo se abordará el problema de crear un modelo para predecir el número de vehículos registrados diariamente en el Registro Único Nacional de Tránsito (RUNT). Los datos para crear el modelo se encuentran en el drive del curso bajo el nombre "registro_autos_entrenamiento.xlsx".
+
+El objetivo será crear un modelo predictivo y utilizarlo para predecir todo el 2018.
+
+
+
+## 1 - Construcción del entendimiento
+El equipo de trabajo deberá definir las variables explicativas y el tipo de modelo que utilizará. Varios modelos son posibles.
+
+## 2 - Entregables
+
+Los entregables de este trabajo serán los siguientes:
+
+### Aplicación web
+Visualización: esta aplicación deberá permitir seleccionar un rango de fechas y devolver la predicción.
+
+### Video promocional
+La aplicación web deberá estar acompañada de un video promocional en youtube donde se explique los beneficios de utilizarla y el cómo se usa. Tanto la aplicación como el video se deben construir pensando en un usuario en particular definido por los estudiantes.
+
+### Reporte técnico
+Debe contener la descripción y justificación de las variables, la metodología utilizada y las métricas de error obtenidas.
+
+### Archivos plantos
+Se deben entregar dos archivos planos con las siguientes predicciones del modelo:
+1. Predicciones para los días comprendidos entre el 01/01/2012 y el 31/12/2016.
+2. Predicciones para los días comprendidos entre el 01/01/2018 y el 30/06/2018.
+
+## 5 - Equipos y fecha de entrega
+1. Equipos: los equipos estarán conformados por cuatro o cinco estudiantes. Cada equipo deberá tener al menos un estudiante del pregrado en estadística y al menos un estudiante del pregrado e ingeniería de sistemas. Se sugiere mantener los grupos de la primera entrega.
+
+2. Fecha de entrega: el trabajo se deberá entregar el día miércoles 10 de octubre y se debe enviar al correo jdospina@unal.edu.co.
+
+## 6 - Califiación
+El trabajo se calificará con los siguientes criterios:
+
+1. Aplicación (20%): debe cumplir el objetivo y tener una buena experiencia de usuario
+2. Reporte ténico (20%): debe cumplir el objetivo y estar presentado en el formato correcto
+3. Video promocional (10%): debe explicar qué hace la aplicación
+4. $R^2$ entrenamiento (20%): se calculará a partir el primer archivo plano
+5. $R^2$ validación (30%): se calculará a partir del segundo archivo plano 
+
+Nota: una variación mayor al 10% entre el $R^2$ calculado para el primer semestre de 2017 y para el primer semestre de 2018 hará que estos dos ítems de la calificación sean iguales a cero.
+
+
+
+
+
+
+
+
+
+
+

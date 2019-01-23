@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <!-- sripts coneccion R-->
+  
+  <script src="shared/jquery.js" type="text/javascript"></script>
+  <script src="shared/shiny.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="shared/shiny.css"/>
+  
+</head>
+
+
+
+
+
+
+<body>
+
+<script src="shared/json2-min.js"></script>
+<script src="shared/jquery.min.js"></script>
+<link href="shared/shiny.css" rel="stylesheet" />
+<script src="shared/shiny.min.js"></script>
+<link href="shared/selectize/css/selectize.bootstrap3.css" rel="stylesheet" />
+<script src="shared/selectize/js/selectize.min.js"></script>
+<link href="shared/datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" />
+<script src="shared/datepicker/js/bootstrap-datepicker.min.js"></script>
+<script>
+
+
+
+
+
+(function() {
+  var datepicker = $.fn.datepicker.noConflict();
+  $.fn.bsDatepicker = datepicker;
+})();
+</script>
+<link href="shared/ionrangeslider/css/ion.rangeSlider.css" rel="stylesheet" />
+<link href="shared/ionrangeslider/css/ion.rangeSlider.skinShiny.css" rel="stylesheet" />
+<script src="shared/ionrangeslider/js/ion.rangeSlider.min.js"></script>
+<script src="shared/strftime/strftime-min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="shared/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="shared/bootstrap/js/bootstrap.min.js"></script>
+<script src="shared/bootstrap/shim/html5shiv.min.js"></script>
+<script src="shared/bootstrap/shim/respond.min.js"></script>  <link rel="stylesheet" type="text/css" href="shinythemes/css/flatly.min.css"/>
+
+  
+
+<!-- Seleccion por fecha --> 
+
+<div class="date-inputs">
+
+
+                <div id="DRIFechaRango" class="shiny-date-range-input form-group shiny-input-container">
+                  <label class="control-label" for="DRIFechaRango">
+                    <h4>Rango de fechas:</h4>
+                  </label>
+                  <div class="input-daterange input-group">
+                
+                
+                    <span class="input-group-addon"> apartir de </span>
+                    <input class="input-sm form-control" name=fecha1 type="text" data-date-language="en" data-date-week-start="0" data-date-format="yyyy-mm-dd" data-date-start-view="month" data-min-date="2012-01-1" data-max-date="2018-12-31" value="2018-01-1"/>
+                    
+              
+                   <span class="input-group-addon"> hasta </span>
+                    <input class="input-sm form-control" name=fecha2 type="text" data-date-language="en" data-date-week-start="0" data-date-format="yyyy-mm-dd" data-date-start-view="month" data-min-date="2012-01-1" data-max-date="2018-12-31" value="2018-01-5"/>
+                  </div>
+                </div>
+              </div>
+  
+  
+  
+  <!-- **************************************************************************-->
+  
+  <h4>Cantidad de días a mostrar en la tabla</h4>
+  <input type="number" name="n" value="5" min="3" max="20" />
+  
+  
+  
+  <h3>Total de vehículos registrados en el RUNT</h3>
+  <pre id="suma" class="shiny-text-output"></pre>
+
+
+  <h3>Número de vehículos por dias</h3>
+  <div id="table" class="shiny-html-output"></div>
+
+
+   <h3>Serie de tiempo del número vehículos</h3>
+   <div id="plot" class="shiny-plot-output"
+   style="width: 100%; height: 300px"></div>
+
+
+</body>
+</html>
